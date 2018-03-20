@@ -1,0 +1,37 @@
+﻿7) Play https://try.github.io/.
+git status
+	добавляємо файли до локального репозиторію:
+git add .
+	комітимо зміни:
+git commite -m "text"
+	передивляємося лог змін (комітів)
+git log
+	звязуємо локальний репозиторій з віддаленим на Гіту:
+git remote add origin [link to empty GitHub repository]
+	пушимо (відправляємо) локальний репо на Гіт:
+git push -u origin master
+	якщо відбулися зміни на Гіту - загружаємо (обновляємо) репозиторій локально:
+git pull origin master
+	відбулися зміни, перевіримо що то були за зміни:
+git diff HEAD
+	добавимо ще один файл та подивимось на зміни:
+git add octofamily/octodog.txt
+git diff --staged
+	видалимо один не потрібний файл:
+git reset octofamily/octodog.txt
+	повернемо назад файл до останьої фіксації:
+git checkout -- octocat.txt
+	створимо копію (бренчу) нашого "коду" з назвою clean_up та перейдемо в цю гілку:
+git branch clean_up
+git checkout clean_up
+	видаляємо всі файли по певній масці:
+git rm '*.txt'
+	фіксцємо останні дії:
+git commit -m "Remove all the cats"
+	повертаємось до головної гілки та обєднуємо зміни:
+git checkout master
+git merge clean_up
+	видаляємо гілку яка вже не потрібна:
+git branch -d clean_up
+	вносимо всі зміни на віддалений сервер:
+git push
